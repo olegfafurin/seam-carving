@@ -1,0 +1,44 @@
+<h2>Description</h2>
+
+<p>Now you have everything to resize the image while preserving its content. Simply remove the seam, then remove the seam from the resulting image and so on!</p>
+
+<h2>Objective</h2>
+
+<p>Add two more command line parameters. Use parameter <code class="java">-width</code> for the number of vertical seams to remove and <code class="java">-height</code> for horizontal seams.</p>
+
+<p>At this stage, your program should reduce the input image and save the result using the following algorithm:</p>
+
+<ol>
+	<li>Find a vertical seam and remove all the pixels that this seam contains. Then find another vertical seam on the resulted image and delete all the pixels that the second seam contains. Repeat the process until you remove the specified number of vertical seams.</li>
+	<li>Do the same, but with horizontal seams.</li>
+</ol>
+
+<h2>Example</h2>
+
+<p>The greater-than symbol followed by a space (<code class="java">&gt; </code>) represents the user input. Note that it's not part of the input.</p>
+
+<p><strong>Example 1:</strong></p>
+
+<p>In the following example, the program should reduce the image width by 125 pixels and height by 50 pixels</p>
+
+<pre><code class="language-no-highlight">&gt; java Main -in sky.png -out sky-reduced.png -width 125 -height 50</code></pre>
+
+<p>For the following <code class="java">sky.png</code>:</p>
+
+<p> <strong><img alt="" height="205" src="https://lh6.googleusercontent.com/3UunASdpPsuGEyiTcm_hpcRkO-HXWiT0AEOYffQPtrtFPgW8C_W4pcCsEVITifZOd0R1alttczfaeeRAVdn8XSL3ZcT1XJ5BPUnoPoR8zgeo-43Pf8cgxWwvjb1gZSm3pmQduG0n" width="308"></strong></p>
+
+<p><code class="java">sky-reduced.png</code> should look like this:</p>
+
+<p><strong><img alt="" height="200" src="https://lh3.googleusercontent.com/_Ym63YhQvvucO8qUSYkpxas2nKdTGTLcRUH_lc7t91f8x7kLwoKk9KX_kbhvKhi3sxQiRadV59evKPcDkehx8rEKM86eSaPP9uhafmliHco6b7TZVGxp_L7ac49H8h2Uc_WL4VRy" width="263"></strong></p>
+
+<p><strong>Example 2:</strong></p>
+
+<pre><code class="language-no-highlight">&gt; java Main -in trees.png -out trees-reduced.png -width 100 -height 30</code></pre>
+
+<p>For <code class="java">trees.png</code>:</p>
+
+<p><strong><img alt="" height="248" src="https://lh3.googleusercontent.com/aNYkWYZUYMLihMdtI341OoiBqUOENSBtjm30v950oHtMBm01e_eNo4grjNPgp_MgbqnVu0wX9UVzab47O65h0Dr8HfZv98eHCeGpr5byUcES8c_-gO33feDUfB6R--HndOdcMxrP" width="346"></strong></p>
+
+<p><code class="java">trees-reduced.png</code> should look like this:</p>
+
+<p><strong><img alt="" height="206" src="https://lh6.googleusercontent.com/jjA12yuFxhRWVebJu67Nrqdru6iNi77ak3_UjP6C54LPatfnjYKL1FplB8D2G0WpZhqK6qIRgA65gbOEQFigu99Nx1H-SvhVWhOscUJvlpYDN4LZynRXn__nR5131iIRZFWr8pRX" width="260"></strong></p>
