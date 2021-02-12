@@ -40,8 +40,12 @@ fun calcEnergy(pixels: List<List<RGB>>): List<List<Double>> {
                 h - 1 -> h - 2
                 else -> j
             }
-            val dx = (pixels[argX + 1][j].red - pixels[argX - 1][j].red).toDouble().pow(2.0) + (pixels[argX + 1][j].green - pixels[argX - 1][j].green).toDouble().pow(2.0) + (pixels[argX + 1][j].blue - pixels[argX - 1][j].blue).toDouble().pow(2.0)
-            val dy = (pixels[i][argY + 1].red - pixels[i][argY - 1].red).toDouble().pow(2.0) + (pixels[i][argY + 1].green - pixels[i][argY - 1].green).toDouble().pow(2.0) + (pixels[i][argY + 1].blue - pixels[i][argY - 1].blue).toDouble().pow(2.0)
+            val dx = (pixels[argX + 1][j].red - pixels[argX - 1][j].red).toDouble().pow(2.0) +
+                    (pixels[argX + 1][j].green - pixels[argX - 1][j].green).toDouble().pow(2.0) +
+                    (pixels[argX + 1][j].blue - pixels[argX - 1][j].blue).toDouble().pow(2.0)
+            val dy = (pixels[i][argY + 1].red - pixels[i][argY - 1].red).toDouble().pow(2.0) +
+                    (pixels[i][argY + 1].green - pixels[i][argY - 1].green).toDouble().pow(2.0) +
+                    (pixels[i][argY + 1].blue - pixels[i][argY - 1].blue).toDouble().pow(2.0)
             energy[i][j] = (dx + dy).pow(0.5)
         }
     }
